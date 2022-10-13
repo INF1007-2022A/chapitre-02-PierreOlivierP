@@ -2,7 +2,17 @@
 # -*- coding: utf-8 -*-
 def majuscule(mot):
     # TODO completer la fonction ici
-    return mot
+    b = ''
+    mot = str(mot)
+    for ma in mot:
+        numero = int(ord(ma))
+        if (numero>96 and numero<123):
+            nouveau = str(chr(ord(ma) - (97-65)))
+            b = b+nouveau
+        else:
+            b = b + ma
+
+    return b
 
 
 if __name__ == '__main__':
